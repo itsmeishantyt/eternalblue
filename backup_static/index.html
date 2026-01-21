@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="EternalBlue Studios - Creating innovative digital experiences. Explore our portfolio including Looklist and Tan Ai.">
+    <meta name="keywords" content="EternalBlue Studios, web development, portfolio, Looklist, Tan Ai">
+    <meta name="author" content="EternalBlue Studios">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EternalBlue Studios - Digital Innovation">
+    <meta property="og:description"
+        content="Creating innovative digital experiences and cutting-edge web applications.">
+
+    <title>EternalBlue Studios - Digital Innovation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="EternalBlue Logo" class="logo-image">
+                <span class="logo-text">EternalBlue<span class="logo-accent">Studios</span></span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Crafting Digital</span>
+                    <span class="title-line">Excellence</span>
+                </h1>
+                <p class="hero-subtitle">
+                    We transform ideas into innovative digital experiences that inspire and engage.
+                </p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary">View Our Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll to explore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">Building the future, one project at a time</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        At <strong>EternalBlue Studios</strong>, we're passionate about creating cutting-edge digital
+                        solutions
+                        that push the boundaries of what's possible. Our team combines technical expertise with creative
+                        vision to deliver exceptional web applications and digital experiences.
+                    </p>
+                    <p class="about-description">
+                        From concept to deployment, we focus on crafting scalable, performant, and beautiful
+                        applications
+                        that make a lasting impact.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Creating intuitive and visually stunning user interfaces</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Building robust applications from frontend to backend</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3>Performance</h3>
+                        <p>Optimizing for speed, scalability, and reliability</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🔒</div>
+                        <h3>Security</h3>
+                        <p>Implementing best practices for data protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">Featured projects that showcase our expertise</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1: Looklist -->
+                <article class="project-card" data-project="looklist">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <span class="placeholder-text">Looklist</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" target="_blank" rel="noopener">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Looklist</h3>
+                        <p class="project-description">
+                            A comprehensive platform connecting clients with service professionals.
+                            Features include booking management, real-time messaging, payment processing,
+                            and advanced search functionality.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">Real-time</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Tan Ai -->
+                <article class="project-card" data-project="tanai">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <span class="placeholder-text">Tan Ai</span>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" target="_blank" rel="noopener">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tan Ai</h3>
+                        <p class="project-description">
+                            An innovative AI-powered application delivering intelligent solutions.
+                            Built with modern technologies and a focus on user experience and performance.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Modern UI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Add more projects card (placeholder for future expansion) -->
+                <article class="project-card project-card-placeholder">
+                    <div class="project-content-center">
+                        <div class="plus-icon">+</div>
+                        <h3>More Projects Coming Soon</h3>
+                        <p>We're constantly working on new and exciting projects</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's bring your ideas to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you
+                        as soon as possible.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:contact@eternalblue.studio">contact@eternalblue.studio</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <h4>Connect</h4>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" aria-label="GitHub" target="_blank">GitHub</a>
+                                    <a href="#" class="social-link" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+                                    <a href="#" class="social-link" aria-label="Twitter" target="_blank">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    <p class="form-status" id="formStatus"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="EternalBlue Logo" class="logo-image"
+                            style="height: 50px;">
+                        <span class="logo-text">EternalBlue<span class="logo-accent">Studios</span></span>
+                    </div>
+                    <p>Crafting digital excellence since 2024</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EternalBlue Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
