@@ -15,20 +15,34 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate sending
-        const btn = e.target.querySelector('button');
+
+        const btn = e.target.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
         btn.textContent = 'Sending...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            setStatus('success');
-            setFormData({ name: '', email: '', message: '' });
-            btn.textContent = originalText;
-            btn.disabled = false;
+        // Create FormData for Netlify
+        const netlifyFormData = new FormData(e.target);
 
-            setTimeout(() => setStatus(''), 5000);
-        }, 1500);
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(netlifyFormData).toString()
+        })
+            .then(() => {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                btn.textContent = originalText;
+                btn.disabled = false;
+                setTimeout(() => setStatus(''), 5000);
+            })
+            .catch((error) => {
+                console.error('Form submission error:', error);
+                setStatus('error');
+                btn.textContent = originalText;
+                btn.disabled = false;
+                setTimeout(() => setStatus(''), 5000);
+            });
     };
 
     return (
@@ -78,11 +92,23 @@ const Contact = () => {
 
                     <motion.form
                         className="contact-form"
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
                         onSubmit={handleSubmit}
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
+                        {/* Hidden fields for Netlify */}
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p hidden>
+                            <label>
+                                Don't fill this out: <input name="bot-field" />
+                            </label>
+                        </p>
+
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
                             <input
@@ -124,6 +150,11 @@ const Contact = () => {
                         {status === 'success' && (
                             <div className="form-status success">
                                 Thank you! Your message has been sent successfully.
+                            </div>
+                        )}
+                        {status === 'error' && (
+                            <div className="form-status error">
+                                Oops! Something went wrong. Please try again.
                             </div>
                         )}
                     </motion.form>
@@ -172,6 +203,13 @@ const Contact = () => {
                     background: rgba(0, 255, 157, 0.1);
                     border: 1px solid var(--color-success);
                     color: var(--color-success);
+                    border-radius: 0.5rem; text-align: center;
+                }
+                .form-status.error {
+                    margin-top: 1rem; padding: 1rem;
+                    background: rgba(239, 68, 68, 0.1);
+                    border: 1px solid #ef4444;
+                    color: #ef4444;
                     border-radius: 0.5rem; text-align: center;
                 }
             `}</style>
