@@ -5,13 +5,7 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-logo">
                         <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <img
-                                src="/assets/images/logo.png"
-                                alt="EternalBlue Logo"
-                                className="logo-image"
-                                style={{ height: '40px', mixBlendMode: 'screen' }}
-                            />
-                            <span className="logo-text">EternalBlue<span className="logo-accent">Studios</span></span>
+                            <span className="logo-text">Synvexis<span className="logo-accent">Digital</span></span>
                         </div>
                         <p>Crafting digital excellence since 2024</p>
                     </div>
@@ -23,7 +17,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} EternalBlue Studios. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Synvexis Digital. All rights reserved.</p>
                 </div>
             </div>
             <style>{`

@@ -285,7 +285,7 @@ function isInViewport(element) {
 
 // Log when page is fully loaded
 window.addEventListener('load', () => {
-    console.log('%c🎨 EternalBlue Studios Portfolio', 'color: #2563eb; font-size: 20px; font-weight: bold;');
+    console.log('%c🎨 Synvexis Digital Portfolio', 'color: #2563eb; font-size: 20px; font-weight: bold;');
     console.log('%cWebsite loaded successfully!', 'color: #06b6d4; font-size: 14px;');
 });
 

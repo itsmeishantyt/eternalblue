@@ -30,7 +30,7 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <p className="about-description">
-                            At <strong>EternalBlue Studios</strong>, we're passionate about creating cutting-edge digital solutions
+                            At <strong>Synvexis Digital</strong>, we're passionate about creating cutting-edge digital solutions
                             that push the boundaries of what's possible. Our team combines technical expertise with creative
                             vision to deliver exceptional web applications and digital experiences.
                         </p>

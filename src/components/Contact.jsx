@@ -58,106 +58,27 @@ const Contact = () => {
                     <p className="section-subtitle">Let's bring your ideas to life</p>
                 </motion.div>
 
-                <div className="contact-content">
+                <div className="contact-content-centered">
                     <motion.div
                         className="contact-info"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
+                        style={{ textAlign: 'center', margin: '0 auto' }}
                     >
                         <h3>Let's Work Together</h3>
-                        <p>Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you as soon as possible.</p>
+                        <p>Have a project in mind? We'd love to hear about it. Send us an email and we'll get back to you as soon as possible.</p>
 
-                        <div className="contact-details">
-                            <div className="contact-item">
-                                <div className="contact-icon">📧</div>
+                        <div className="contact-details-centered">
+                            <div className="contact-item-centered">
+                                <div className="contact-icon" style={{ fontSize: '2rem', marginBottom: '1rem' }}>📧</div>
                                 <div>
-                                    <h4>Email</h4>
-                                    <a href="mailto:contact@eternalblue.studio">contact@eternalblue.studio</a>
-                                </div>
-                            </div>
-                            <div className="contact-item">
-                                <div className="contact-icon">💼</div>
-                                <div>
-                                    <h4>Connect</h4>
-                                    <div className="social-links">
-                                        <a href="#" className="social-link" target="_blank" rel="noreferrer">GitHub</a>
-                                        <a href="#" className="social-link" target="_blank" rel="noreferrer">LinkedIn</a>
-                                        <a href="#" className="social-link" target="_blank" rel="noreferrer">Twitter</a>
-                                    </div>
+                                    <h4 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Email</h4>
+                                    <a href="mailto:synvexisdigital@gmail.com" style={{ fontSize: '1.25rem', color: 'var(--color-accent)' }}>synvexisdigital@gmail.com</a>
                                 </div>
                             </div>
                         </div>
                     </motion.div>
-
-                    <motion.form
-                        className="contact-form"
-                        name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        netlify-honeypot="bot-field"
-                        onSubmit={handleSubmit}
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        {/* Hidden fields for Netlify */}
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p hidden>
-                            <label>
-                                Don't fill this out: <input name="bot-field" />
-                            </label>
-                        </p>
-
-                        <div className="form-group">
-                            <label htmlFor="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                                placeholder="Your name"
-                                value={formData.name}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="your.email@example.com"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="5"
-                                required
-                                placeholder="Tell us about your project..."
-                                value={formData.message}
-                                onChange={handleChange}
-                            ></textarea>
-                        </div>
-                        <button type="submit" className="btn btn-primary btn-full">Send Message</button>
-
-                        {status === 'success' && (
-                            <div className="form-status success">
-                                Thank you! Your message has been sent successfully.
-                            </div>
-                        )}
-                        {status === 'error' && (
-                            <div className="form-status error">
-                                Oops! Something went wrong. Please try again.
-                            </div>
-                        )}
-                    </motion.form>
                 </div>
             </div>
 

@@ -41,6 +41,7 @@ const Projects = () => {
                                 and advanced search functionality.
                             </p>
                             <div className="project-technologies">
+                                <span className="tech-tag location-tag">🇬🇧 UK</span>
                                 <span className="tech-tag">JavaScript</span>
                                 <span className="tech-tag">Supabase</span>
                                 <span className="tech-tag">Stripe</span>
@@ -74,10 +75,44 @@ const Projects = () => {
                                 Built with modern technologies and a focus on user experience and performance.
                             </p>
                             <div className="project-technologies">
+                                <span className="tech-tag location-tag">🇬🇧 UK</span>
                                 <span className="tech-tag">AI/ML</span>
                                 <span className="tech-tag">JavaScript</span>
                                 <span className="tech-tag">API Integration</span>
                                 <span className="tech-tag">Modern UI</span>
+                             </div>
+                        </div>
+                    </motion.article>
+
+                    {/* Project 3: N&Z Logistics LLC */}
+                    <motion.article
+                        className="project-card"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                    >
+                        <div className="project-image">
+                            <img
+                                src="/assets/images/nnzlogistics.png"
+                                alt="N&Z Logistics LLC"
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                            <div className="project-overlay">
+                                <a href="https://nnzlogisticsllc.com" className="project-link" target="_blank" rel="noopener noreferrer">View Live</a>
+                            </div>
+                        </div>
+                        <div className="project-content">
+                            <h3 className="project-title">N&Z Logistics LLC</h3>
+                            <p className="project-description">
+                                A robust logistics and transportation management solution designed for efficiency and reliability.
+                                Streamlining fleet operations and real-time shipment tracking.
+                            </p>
+                            <div className="project-technologies">
+                                <span className="tech-tag location-tag">🇺🇸 USA</span>
+                                <span className="tech-tag">Logistics Tech</span>
+                                <span className="tech-tag">Fleet Management</span>
+                                <span className="tech-tag">Real-time Tracking</span>
                             </div>
                         </div>
                     </motion.article>
@@ -151,6 +186,12 @@ const Projects = () => {
             border: 1px solid rgba(37, 99, 235, 0.3);
             color: var(--color-primary-light);
             font-size: 0.75rem; text-transform: uppercase; border-radius: 4px;
+        }
+        .location-tag {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: rgba(0, 240, 255, 0.3);
+            color: var(--color-accent);
+            font-weight: 700;
         }
       `}</style>
         </section>

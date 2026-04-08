@@ -53,17 +53,7 @@ const Navbar = () => {
                     onMouseLeave={handleLogoMouseLeave}
                     style={{ display: 'flex', alignItems: 'center', gap: '1rem', perspective: '1000px', cursor: 'pointer' }}
                 >
-                    <img
-                        src="/assets/images/logo.png"
-                        alt="EternalBlue Logo"
-                        className="logo-image"
-                        style={{
-                            height: '44px', width: 'auto', objectFit: 'contain',
-                            mixBlendMode: 'screen', transition: 'transform 0.1s ease-out',
-                            filter: 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.5))'
-                        }}
-                    />
-                    <span className="logo-text">EternalBlue<span className="logo-accent">Studios</span></span>
+                    <span className="logo-text">Synvexis<span className="logo-accent">Digital</span></span>
                 </div>
 
                 <button
